@@ -1,0 +1,13 @@
+# Captain Chuck 6 — Namecheap Stellar (LiteSpeed), mounted at /CaptainChuck-6/
+# This site is meant to be indexed: override the account-wide noindex header
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "index, follow"
+</IfModule>
+
+# don't cache HTML so updates go live instantly; hash assets aggressively
+<FilesMatch "\.html$">
+  Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.(woff2|jpg|png|svg|css|js)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>

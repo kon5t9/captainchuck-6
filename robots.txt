@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://golflimafoxtrot.com/CaptainChuck-6/sitemap.xml
